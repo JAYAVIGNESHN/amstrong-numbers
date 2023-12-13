@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int a,c,t,rem1,rem2,sum;
+    printf("Enter a:");
+    scanf("%d",&a);
+    c=0;
+    t=a;
+    sum=0;
+    while(a>0) {
+        rem1=a%10;
+        c++;
+        a=a/10;
+    }
+    int b=t;
+    while(t>0) {
+        rem2=t%10;
+        int p=1,l=c;
+        while(l>0) {
+            p=p*rem2;
+            l--;
+        }
+        sum=sum+p;
+        t=t/10;
+    }
+    (b==sum)?printf("Amstrong"):printf("Not Amstrong");
+    return 0;
+}
